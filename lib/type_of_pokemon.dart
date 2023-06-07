@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/add_page.dart';
+//import 'package:hello_world/add_pokemon.dart';
 
 class TypeOfPokemon extends StatefulWidget {
   const TypeOfPokemon({super.key});
@@ -36,7 +38,16 @@ class _TypeOfPokemonState extends State<TypeOfPokemon> {
               fontSize: 64,
             ),
           )
-          )
+          ),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) {
+                    return const AddPage();
+                  },
+                ));
+              },
+              child: const Text("Add your own Pokemon!")),
         ]
       )
     );
